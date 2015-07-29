@@ -17,6 +17,27 @@ class PostsController < ApplicationController
     redirect_to posts_path(@post)
   end
 
+  # edit
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  # update
+  def update
+    @post = Post.find(params[:id])
+    @post.update(post_params)
+
+    redirect_to posts_path(@post)
+  end
+
+  # destroy
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+
+    redirect_to posts_path
+  end
+
   private
   def post_params
     params.require(:post).permit(:title, :author, :text, :created_at, :updated_at)
