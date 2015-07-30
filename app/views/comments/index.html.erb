@@ -1,0 +1,9 @@
+<h2>Comments <%= link_to "(+)", new_post_comment_path %></h2>
+
+<ul>
+  <% @comments.each do |comment| %>
+    <li>
+      <%= link_to "#{comment.text} - #{comment.post.title}", post_comment_path( @artist, song ) %>
+    </li>
+  <% end %>
+</ul
