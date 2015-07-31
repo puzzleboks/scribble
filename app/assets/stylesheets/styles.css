@@ -3,3 +3,41 @@ body {
   margin: 0 auto;
   font-family: 'Lato', sans-serif;
 }
+
+a {
+  text-decoration: none;
+}
+
+ul.menu {
+  padding: 0;
+}
+
+ul.menu li {
+  display: inline;
+}
+
+ul.menu li a {
+  padding: 10px 10px;
+}
+
+ul.postList {
+  padding: 0;
+  list-style-type: none;
+}
+
+.postList {
+  text-decoration: none;
+}
+ul.postList li {
+
+  /*display: inline;*/
+}
+
+ul.postList li a {
+  /*padding: 5px 0px;*/
+}
+
+h3 {
+  display: inline-block;
+  margin-bottom: 10px;
+}

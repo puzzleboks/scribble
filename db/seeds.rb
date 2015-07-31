@@ -5,6 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Post.destroy_all
+Comment.destroy_all
+
+
 post1 = Post.create(title: "Ways to Improve Yourself", author: "Salman Rushdie", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus tincidunt, egestas elit vel, gravida eros. Nunc varius lacus eu sodales eleifend. Donec ut bibendum risus. Nam mollis maximus tellus sed efficitur. Duis sagittis ac dui ac imperdiet. Quisque vestibulum lorem vitae tincidunt porttitor. Sed turpis tellus, scelerisque porta fringilla sed, luctus vel velit. Quisque dignissim ullamcorper diam, nec ultrices turpis laoreet et. Aenean id posuere ligula. Sed sapien diam, tincidunt et arcu vitae, sollicitudin ultricies ex.", created_at: Date.current)
 
 post2 = Post.create(title: "Why Seinfeld was the Best Show Ever", author: "John McMillan", text: "Duis ornare, felis eu fringilla sodales, nulla magna sollicitudin mi, et interdum odio velit in eros. Ut eget dolor ipsum. Curabitur luctus velit ut arcu rutrum, eu luctus ipsum tristique. Nullam vitae nunc nec mi maximus consectetur. Quisque dignissim semper velit, a efficitur diam tempus porttitor. Nulla facilisi. Vestibulum a suscipit ipsum. Praesent tempus tincidunt ex, ut auctor sem auctor vel.", created_at: Date.current)

@@ -9,8 +9,10 @@
 </head>
 <body>
   <nav>
-    <a href="/signin">Sign in</a>
-    <%= link_to 'New post', new_post_path %>
+    <ul class="menu">
+      <li><a href="/signin">Sign in</a></li>
+      <li><%= link_to 'New post', new_post_path %></li>
+    </ul>
   </nav>
   <header>
     <%= image_tag("scribble.jpg", size: "200x166") %>

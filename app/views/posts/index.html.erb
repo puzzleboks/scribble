@@ -1,14 +1,9 @@
 <h1>Posts</h1>
-<table>
+<ul class="postList">
   <% @posts.each do |post| %>
-    <tr>
-      <td><h3><%= post.title %></h3></td>
-    </tr>
-    <tr>
-      <td><%= post.author %></td>
-    </tr>
-    <tr>
-      <td><%= link_to 'view', post %></td>
-    </tr>
+    <li><h3><%= post.title %></h3></li>
+    <%= post.author %>
+    <%= link_to 'view', post %>
+
   <% end %>
-</table>
+</ul>
