@@ -1,9 +1,18 @@
 <h2>Comments <%= link_to "(+)", new_post_comment_path %></h2>
 
-<ul>
+<table>
   <% @comments.each do |comment| %>
-    <li>
-      <%= link_to "#{comment.text} - #{comment.post.title}", post_comment_path( @post, comment ) %>
-    </li>
+  <tr>
+    <td><h4><%= comment.text %></td></h4>
+  </tr>
+  <tr>
+    <td><h4>By:<%= comment.author %></td></h4>
+  </tr>
+  <tr>
+    <td><h4>About:<%= comment.post.title %></td></h4>
+  </tr>
+  <tr>
+    <td><%= link_to "view", post_comment_path( @post, comment )%></td>
+  </tr>
   <% end %>
-</ul
+</table>

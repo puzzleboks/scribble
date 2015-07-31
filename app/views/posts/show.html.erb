@@ -9,13 +9,17 @@
   <%= @post.text %>
 </p>
 
-<h3>Comments <%= link_to "(+)", new_post_comment_path(@post) %></h3>
-<ul>
+<h3>Comments <%= link_to "(new)", new_post_comment_path(@post) %></h3>
+<table>
   <% @post.comments.each do |comment| %>
-    <li>
-      <%= link_to "#{comment.text}", post_comment_path(@post, comment) %>
-    </li>
-
+    <tr>
+      <td><%= comment.text %></td>
+    </tr>
+    <tr>
+      <td><p><%= comment.author %></p>
+        <p><%= link_to "(edit)", edit_post_comment_path(@post, comment) %></p>
+        </td>
+    </tr>
   <% end %>
-</ul>
+</table>
 <%= link_to 'Back', posts_path %>
