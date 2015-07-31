@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create(comment_params)
 
-    redirect_to post_comments_path(@post, @comment)
+    redirect_to post_comments_path()
   end
 
   #show
@@ -37,7 +37,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     @comment.update(comment_params)
 
-    redirect_to post_comments_path(@post, @comment)
+    redirect_to post_comments_path()
   end
 
   # destroy

@@ -1,23 +1,15 @@
-<!-- <h1>Listing Posts</h1>
+<h1>Posts</h1>
 <%#= link_to 'New post', new_post_path %>
 <table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
-
-  <%# @posts.each do |post| %>
-    <tr>
-      <td><%#= post.title %></td>
-      <td><%#= post.text %></td>
-    </tr>
-  <%# end %>
-</table> -->
-
-<h2>Posts <%= link_to "(+)", new_post_path %></h2>
-
-<ul>
   <% @posts.each do |post| %>
-    <li><%= link_to post.title, post %></li>
+    <tr>
+      <td><h3><%= post.title %></h3></td>
+    </tr>
+    <tr>
+      <td><%= post.author %></td>
+    </tr>
+    <tr>
+      <td><%= link_to 'view', post %></td>
+    </tr>
   <% end %>
-</ul>
+</table>
